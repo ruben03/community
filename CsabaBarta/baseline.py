@@ -480,7 +480,7 @@ class driverbl(common.AbstractWindowsCommand):
         addr_space = utils.load_as(self._config)
         drv_scan = DriverScan(self._config)
         
-        if volatility.constants.VERSION != "2.4":
+        if volatility.constants.VERSION != "2.6":
             for obj, drv, ext  in drv_scan.calculate():
                 if ext.ServiceKeyName != None:
                     service_key_name = str(ext.ServiceKeyName).lower()
@@ -616,7 +616,7 @@ class driverbl(common.AbstractWindowsCommand):
         # Instantiating DriverScan plugin
         addr_space = utils.load_as(self._config)
         drv_scan = DriverScan(self._config)
-        if volatility.constants.VERSION != "2.4":
+        if volatility.constants.VERSION != "2.6":
             for obj, drv, ext  in drv_scan.calculate():
                 if ext.ServiceKeyName != None:
                     service_key_name = str(ext.ServiceKeyName).lower()
